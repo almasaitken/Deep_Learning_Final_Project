@@ -7,10 +7,10 @@
 *Almas Aitken, BDA-2101*
 
 *Github link:
-[[https://github.com/almasaitken/Deep_Learning_Final_Project]](https://github.com/almasaitken/Deep_Learning_Final_Project)*
+[https://github.com/almasaitken/Deep_Learning_Final_Project](https://github.com/almasaitken/Deep_Learning_Final_Project)*
 
 *Video link:
-[[https://www.loom.com/share/15d298c577e749bebcedb7e08b8e2e71]](https://www.loom.com/share/15d298c577e749bebcedb7e08b8e2e71)*
+[https://www.loom.com/share/15d298c577e749bebcedb7e08b8e2e71](https://www.loom.com/share/15d298c577e749bebcedb7e08b8e2e71)*
 
 **Project overview**:
 
@@ -80,8 +80,7 @@ probability of belonging to either negative or positive. Values closer
 to 0 signify negative sentiment and values closer to 1 signify positive
 sentiment.
 
-![](media/image2.png){width="6.267716535433071in"
-height="0.9305555555555556in"}
+<img src="/media/image2.png" alt="image" width="601" height="89"/>
 
 For the model above, the vocabulary size is changed to see if this is
 important for the model accuracy. The values tested are 1000, 3000 and
@@ -91,15 +90,13 @@ Then the model with GRU layer instead of LSTM is tested. GRU layer is
 more simple than LSTM so it can better fit simple models with fewer data
 than LSTM. GRU retains shorter memory than LSTM.
 
-![](media/image3.png){width="6.267716535433071in"
-height="0.9305555555555556in"}
+<img src="/media/image3.png" alt="image" width="601" height="89"/>
 
 Then the bidirectional GRU is implemented to see if it performs better
 than single direction. This might improve the accuracy since the meaning
 of the word can depend on both preceding and succeeding words.
 
-![](media/image1.png){width="6.267716535433071in"
-height="0.9305555555555556in"}
+<img src="/media/image1.png" alt="image" width="601" height="89"/>
 
 Then the convolutional 1D layer is applied to see if it can improve the
 model. This might improve the accuracy since it can extract some lower
@@ -107,24 +104,22 @@ level features of sentences. This convolutional layer is then tested
 against different vocabulary sizes so that it matches the complexity
 since more words are considered.
 
-![](media/image8.png){width="6.267716535433071in"
-height="1.0694444444444444in"}
+<img src="/media/image8.png" alt="image" width="601" height="89"/>
 
 As the final step, the dropout layer and L2 regularizers are added to
 prevent overfitting of the model.
 
-![](media/image7.png){width="6.267716535433071in"
-height="0.9722222222222222in"}
+<img src="/media/image7.png" alt="image" width="601" height="89"/>
 
 **Literature review with links (another solutions):**
 
--   [[https://www.kaggle.com/code/vincentman0403/sentimental-analysis-on-imdb-by-lstm]{.underline}](https://www.kaggle.com/code/vincentman0403/sentimental-analysis-on-imdb-by-lstm)
+-   [https://www.kaggle.com/code/vincentman0403/sentimental-analysis-on-imdb-by-lstm](https://www.kaggle.com/code/vincentman0403/sentimental-analysis-on-imdb-by-lstm)
 
 My solution is similar to this. This solution uses the IMDB reviews
 dataset from Keras which is already preprocessed. The model includes the
 LSTM layer. Finally, the model achieves the accuracy of 0.86.
 
--   [[https://github.com/hansmichaels/sentiment-analysis-IMDB-Review-using-LSTM/blob/master/sentiment_analysis.py.ipynb]{.underline}](https://github.com/hansmichaels/sentiment-analysis-IMDB-Review-using-LSTM/blob/master/sentiment_analysis.py.ipynb)
+-   [https://github.com/hansmichaels/sentiment-analysis-IMDB-Review-using-LSTM/blob/master/sentiment_analysis.py.ipynb](https://github.com/hansmichaels/sentiment-analysis-IMDB-Review-using-LSTM/blob/master/sentiment_analysis.py.ipynb)
 
 This solution involves manual preprocessing of the IMDB dataset. The csv
 file contains two columns: review and label. Then the author strips the
@@ -133,17 +128,17 @@ lowercase. The reviews are then tokenized using the Tokenizer library.
 The LSTM layer is used in the model. The author achieves an accuracy of
 0.86.
 
--   [[https://www.tensorflow.org/tutorials/keras/text_classification]{.underline}](https://www.tensorflow.org/tutorials/keras/text_classification)
+-   [https://www.tensorflow.org/tutorials/keras/text_classification](https://www.tensorflow.org/tutorials/keras/text_classification)
 
 This solution is similar to the two above, but it uses a
 TextVectorization layer to convert the text to numerical data. Accuracy
 of 0.87 is achieved.
 
--   [[https://medium.com/geekculture/sentiment-analysis-using-rnn-keras-e545fbe000]{.underline}](https://medium.com/geekculture/sentiment-analysis-using-rnn-keras-e545fbe000)
+-   [https://medium.com/geekculture/sentiment-analysis-using-rnn-keras-e545fbe000](https://medium.com/geekculture/sentiment-analysis-using-rnn-keras-e545fbe000)
 
 Similar to the first source. The author achieves 0.82 accuracy.
 
--   [[https://www.tensorflow.org/tutorials/keras/text_classification_with_hub]{.underline}](https://www.tensorflow.org/tutorials/keras/text_classification_with_hub)
+-   [https://www.tensorflow.org/tutorials/keras/text_classification_with_hub](https://www.tensorflow.org/tutorials/keras/text_classification_with_hub)
 
 This solution is similar to the above, but has a bit different
 preprocessing approach. It involves using the pre-trained word
@@ -171,14 +166,12 @@ Graphs of the training accuracy vs validation accuracy:
 
 > *VOCAB_SIZE=1000 VOCAB_SIZE=3000*
 
-![](media/image4.png){width="2.7084416010498686in"
-height="1.944783464566929in"}![](media/image11.png){width="2.7968755468066493in"
-height="1.9408617672790902in"}
+<img src="/media/image4.png" alt="image" width="260" height="186"/>
+<img src="/media/image11.png" alt="image" width="260" height="186"/>
 
 *VOCAB_SIZE=10000*
 
-![](media/image6.png){width="2.8593755468066493in"
-height="2.000618985126859in"}
+<img src="/media/image6.png" alt="image" width="260" height="186"/>
 
 As can be seen from the above, the vocabulary size negatively affects
 the model since the overfitting increases as the vocabulary size
@@ -202,9 +195,8 @@ Graphs of the training accuracy vs validation accuracy:
 
 > LSTM GRU
 
-![](media/image4.png){width="2.9218755468066493in"
-height="2.101502624671916in"}![](media/image12.png){width="3.0156255468066493in"
-height="2.113061023622047in"}
+<img src="/media/image4.png" alt="image" width="260" height="186"/>
+<img src="/media/image12.png" alt="image" width="260" height="186"/>
 
 As can be seen above, the model with GRU layer performs slightly better
 and produces almost the same overfitting rate. So, GRU can be considered
@@ -228,9 +220,8 @@ Graphs of the training accuracy vs validation accuracy:
 
 > Single Direction GRU Bidirectional GRU
 
-![](media/image12.png){width="2.8281255468066493in"
-height="1.9807086614173228in"}![](media/image10.png){width="2.8945056867891514in"
-height="1.9739588801399826in"}
+<img src="/media/image12.png" alt="image" width="260" height="186"/>
+<img src="/media/image10.png" alt="image" width="260" height="186"/>
 
 As can be seen above, the bidirectional layer almost makes no difference
 to either the accuracy and overfitting. So we keep the single direction
@@ -254,9 +245,8 @@ Graphs of the training accuracy vs validation accuracy:
 
 Without CONV1D layer With CONV1D layer
 
-![](media/image12.png){width="2.8281255468066493in"
-height="1.9807086614173228in"}![](media/image9.png){width="2.838542213473316in"
-height="1.9952066929133858in"}
+<img src="/media/image12.png" alt="image" width="260" height="186"/>
+<img src="/media/image9.png" alt="image" width="260" height="186"/>
 
 As can be seen above, the model with convolutional layer performs
 slightly worse and leads to greater overfitting, so no improvement.
@@ -277,9 +267,8 @@ Graphs of the training accuracy vs validation accuracy:
 
 CONV1D with VOCAB_SIZE=1000 CONV1D with VOCAB_SIZE=10000
 
-![](media/image9.png){width="2.838542213473316in"
-height="1.9952066929133858in"}![](media/image5.png){width="2.8424343832020997in"
-height="2.0052088801399823in"}
+<img src="/media/image9.png" alt="image" width="260" height="186"/>
+<img src="/media/image5.png" alt="image" width="260" height="186"/>
 
 The accuracy improvement is insignificant, while there is even greater
 overfit for the data with greater vocabulary size.
@@ -311,30 +300,30 @@ classifying the reviews and it performs well on evident cases.
 
 **Sources**:
 
--   [[https://www.kaggle.com/code/vincentman0403/sentimental-analysis-on-imdb-by-lstm]{.underline}](https://www.kaggle.com/code/vincentman0403/sentimental-analysis-on-imdb-by-lstm)
+-   [https://www.kaggle.com/code/vincentman0403/sentimental-analysis-on-imdb-by-lstm](https://www.kaggle.com/code/vincentman0403/sentimental-analysis-on-imdb-by-lstm)
 
--   [[https://github.com/hansmichaels/sentiment-analysis-IMDB-Review-using-LSTM/blob/master/sentiment_analysis.py.ipynb]{.underline}](https://github.com/hansmichaels/sentiment-analysis-IMDB-Review-using-LSTM/blob/master/sentiment_analysis.py.ipynb)
+-   [https://github.com/hansmichaels/sentiment-analysis-IMDB-Review-using-LSTM/blob/master/sentiment_analysis.py.ipynb](https://github.com/hansmichaels/sentiment-analysis-IMDB-Review-using-LSTM/blob/master/sentiment_analysis.py.ipynb)
 
--   [[https://www.tensorflow.org/tutorials/keras/text_classification]{.underline}](https://www.tensorflow.org/tutorials/keras/text_classification)
+-   [https://www.tensorflow.org/tutorials/keras/text_classification](https://www.tensorflow.org/tutorials/keras/text_classification)
 
--   [[https://medium.com/geekculture/sentiment-analysis-using-rnn-keras-e545fbe000]{.underline}](https://medium.com/geekculture/sentiment-analysis-using-rnn-keras-e545fbe000)
+-   [https://medium.com/geekculture/sentiment-analysis-using-rnn-keras-e545fbe000](https://medium.com/geekculture/sentiment-analysis-using-rnn-keras-e545fbe000)
 
--   [[https://www.tensorflow.org/tutorials/keras/text_classification_with_hub]{.underline}](https://www.tensorflow.org/tutorials/keras/text_classification_with_hub)
+-   [https://www.tensorflow.org/tutorials/keras/text_classification_with_hub](https://www.tensorflow.org/tutorials/keras/text_classification_with_hub)
 
--   [[https://keras.io/api/datasets/imdb/]{.underline}](https://keras.io/api/datasets/imdb/)
+-   [https://keras.io/api/datasets/imdb/](https://keras.io/api/datasets/imdb/)
 
--   [[https://keras.io/api/layers/core_layers/embedding/]{.underline}](https://keras.io/api/layers/core_layers/embedding/)
+-   [https://keras.io/api/layers/core_layers/embedding/](https://keras.io/api/layers/core_layers/embedding/)
 
--   [[https://keras.io/api/layers/core_layers/dense/]{.underline}](https://keras.io/api/layers/core_layers/dense/)
+-   [https://keras.io/api/layers/core_layers/dense/](https://keras.io/api/layers/core_layers/dense/)
 
--   [[https://keras.io/api/layers/convolution_layers/convolution1d/]{.underline}](https://keras.io/api/layers/convolution_layers/convolution1d/)
+-   [https://keras.io/api/layers/convolution_layers/convolution1d/](https://keras.io/api/layers/convolution_layers/convolution1d/)
 
--   [[https://keras.io/api/layers/recurrent_layers/gru/]{.underline}](https://keras.io/api/layers/recurrent_layers/gru/)
+-   [https://keras.io/api/layers/recurrent_layers/gru/](https://keras.io/api/layers/recurrent_layers/gru/)
 
--   [[https://keras.io/api/layers/recurrent_layers/lstm/]{.underline}](https://keras.io/api/layers/recurrent_layers/lstm/)
+-   [https://keras.io/api/layers/recurrent_layers/lstm/](https://keras.io/api/layers/recurrent_layers/lstm/)
 
--   [[https://keras.io/api/layers/recurrent_layers/bidirectional/]{.underline}](https://keras.io/api/layers/recurrent_layers/bidirectional/)
+-   [https://keras.io/api/layers/recurrent_layers/bidirectional/](https://keras.io/api/layers/recurrent_layers/bidirectional/)
 
--   [[https://keras.io/api/layers/regularization_layers/dropout/]{.underline}](https://keras.io/api/layers/regularization_layers/dropout/)
+-   [https://keras.io/api/layers/regularization_layers/dropout/](https://keras.io/api/layers/regularization_layers/dropout/)
 
--   [[https://keras.io/api/layers/preprocessing_layers/text/text_vectorization/]{.underline}](https://keras.io/api/layers/preprocessing_layers/text/text_vectorization/)
+-   [https://keras.io/api/layers/preprocessing_layers/text/text_vectorization/](https://keras.io/api/layers/preprocessing_layers/text/text_vectorization/)
