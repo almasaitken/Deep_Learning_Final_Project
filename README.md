@@ -7,10 +7,10 @@
 *Almas Aitken, BDA-2101*
 
 *Github link:
-[[https://github.com/almasaitken/Deep_Learning_Final_Project]{.underline}](https://github.com/almasaitken/Deep_Learning_Final_Project)*
+[[https://github.com/almasaitken/Deep_Learning_Final_Project]](https://github.com/almasaitken/Deep_Learning_Final_Project)*
 
 *Video link:
-[[https://www.loom.com/share/15d298c577e749bebcedb7e08b8e2e71]{.underline}](https://www.loom.com/share/15d298c577e749bebcedb7e08b8e2e71)*
+[[https://www.loom.com/share/15d298c577e749bebcedb7e08b8e2e71]](https://www.loom.com/share/15d298c577e749bebcedb7e08b8e2e71)*
 
 **Project overview**:
 
@@ -41,8 +41,7 @@ words are converted to 'unknown'.
 
 Example of a single tokenized review with padding applied:
 
-![](media/image13.png){width="3.119792213473316in"
-height="2.059268372703412in"}
+<img src="/media/image13.png" alt="image" width="300" height="197"/>
 
 Example of word form (padding taken out):
 
