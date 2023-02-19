@@ -151,26 +151,21 @@ tested.
 
 Below is the table showing the results:
 
-  -----------------------------------------------------------------------
-  **Vocabulary      **Training        **Validation      **Test accuracy**
-  size**            accuracy**        Accuracy**        
-  ----------------- ----------------- ----------------- -----------------
-  1000              0.8846            0.8444            0.8521
-
-  3000              0.9467            0.8602            0.8616
-
-  10000             0.9811            0.8512            0.8572
-  -----------------------------------------------------------------------
+|**Vocabulary size**|**Training accuracy**|**Validation Accuracy**|**Test accuracy**|
+| :-: | :-: | :-: | :-: |
+|1000|0.8846|0.8444|0.8521|
+|3000|0.9467|0.8602|0.8616|
+|10000|0.9811|0.8512|0.8572|
 
 Graphs of the training accuracy vs validation accuracy:
 
-> *VOCAB_SIZE=1000 VOCAB_SIZE=3000*
-
+*VOCAB_SIZE=1000* 
 <img src="/media/image4.png" alt="image" width="260" height="186"/>
+
+*VOCAB_SIZE=3000*
 <img src="/media/image11.png" alt="image" width="260" height="186"/>
 
 *VOCAB_SIZE=10000*
-
 <img src="/media/image6.png" alt="image" width="260" height="186"/>
 
 As can be seen from the above, the vocabulary size negatively affects
@@ -182,20 +177,17 @@ model with LSTM layer. Vocabulary size is 1000.
 
 Below is the table showing the results:
 
-  -----------------------------------------------------------------------
-  **Model**         **Training        **Validation      **Test accuracy**
-                    accuracy**        accuracy**        
-  ----------------- ----------------- ----------------- -----------------
-  GRU               0.9124            0.8666            0.8700
-
-  LSTM              0.8846            0.8444            0.8521
-  -----------------------------------------------------------------------
+|**Model**|**Training accuracy**|**Validation accuracy**|**Test accuracy**|
+| :-: | :-: | :-: | :-: |
+|GRU|0.9124|0.8666|0.8700|
+|LSTM|0.8846|0.8444|0.8521|
 
 Graphs of the training accuracy vs validation accuracy:
 
-> LSTM GRU
-
+LSTM 
 <img src="/media/image4.png" alt="image" width="260" height="186"/>
+
+GRU
 <img src="/media/image12.png" alt="image" width="260" height="186"/>
 
 As can be seen above, the model with GRU layer performs slightly better
@@ -206,21 +198,17 @@ Next, let's see if a bidirectional layer model improves the accuracy.
 
 Below is the table showing the results:
 
-  -----------------------------------------------------------------------
-  **Model**         **Training        **Validation      **Test accuracy**
-                    accuracy**        accuracy**        
-  ----------------- ----------------- ----------------- -----------------
-  Single direction  0.9124            0.8666            0.8700
-  GRU                                                   
-
-  Bidirectional GRU 0.9197            0.8664            0.8695
-  -----------------------------------------------------------------------
+|**Model**|**Training accuracy**|**Validation accuracy**|**Test accuracy**|
+| :-: | :-: | :-: | :-: |
+|Single direction GRU|0.9124|0.8666|0.8700|
+|Bidirectional GRU|0.9197|0.8664|0.8695|
 
 Graphs of the training accuracy vs validation accuracy:
 
-> Single Direction GRU Bidirectional GRU
-
+Single Direction GRU
 <img src="/media/image12.png" alt="image" width="260" height="186"/>
+
+Bidirectional GRU
 <img src="/media/image10.png" alt="image" width="260" height="186"/>
 
 As can be seen above, the bidirectional layer almost makes no difference
@@ -232,20 +220,17 @@ the model without convolutional layer:
 
 Below is the table showing the results:
 
-  -----------------------------------------------------------------------
-  **Model**         **Training        **Validation      **Test accuracy**
-                    accuracy**        accuracy**        
-  ----------------- ----------------- ----------------- -----------------
-  Without CONV1D    0.9124            0.8666            0.8700
-
-  With CONV1D       0.9517            0.8616            0.8623
-  -----------------------------------------------------------------------
+|**Model**|**Training accuracy**|**Validation accuracy**|**Test accuracy**|
+| :-: | :-: | :-: | :-: |
+|Without CONV1D|0.9124|0.8666|0.8700|
+|With CONV1D|0.9517|0.8616|0.8623|
 
 Graphs of the training accuracy vs validation accuracy:
 
-Without CONV1D layer With CONV1D layer
-
+Without CONV1D layer 
 <img src="/media/image12.png" alt="image" width="260" height="186"/>
+
+With CONV1D layer
 <img src="/media/image9.png" alt="image" width="260" height="186"/>
 
 As can be seen above, the model with convolutional layer performs
@@ -254,20 +239,17 @@ slightly worse and leads to greater overfitting, so no improvement.
 Now let's change the vocabulary size to 10000 so to see if this better
 fits the model with a convolutional layer.
 
-  ------------------------------------------------------------------------
-  **CONV1D**         **Training        **Validation      **Test accuracy**
-                     accuracy**        accuracy**        
-  ------------------ ----------------- ----------------- -----------------
-  Vocab_size=1000    0.9517            0.8616            0.8623
-
-  Vocab_size=10000   0.9965            0.8704            0.8674
-  ------------------------------------------------------------------------
+|**CONV1D** |**Training accuracy**|**Validation accuracy**|**Test accuracy**|
+| :-: | :-: | :-: | :-: |
+|Vocab\_size=1000|0.9517|0.8616|0.8623|
+|Vocab\_size=10000|0.9965|0.8704|0.8674|
 
 Graphs of the training accuracy vs validation accuracy:
 
-CONV1D with VOCAB_SIZE=1000 CONV1D with VOCAB_SIZE=10000
-
+CONV1D with VOCAB_SIZE=1000
 <img src="/media/image9.png" alt="image" width="260" height="186"/>
+
+CONV1D with VOCAB_SIZE=10000
 <img src="/media/image5.png" alt="image" width="260" height="186"/>
 
 The accuracy improvement is insignificant, while there is even greater
